@@ -1,5 +1,4 @@
 <?php  include_once("./data.php"); ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -40,9 +39,9 @@
 
         </div>
 
-        <div
+        <!-- <div
           v-scope="LocalText({data : <?= $carOne->toProp() ?>, defaultText: 'not added', addedText : 'added!', class : 'display-1 text-danger'})">
-        </div>
+        </div> -->
 
       </div>
       <div class="col-6">

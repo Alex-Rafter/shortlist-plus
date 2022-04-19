@@ -14,7 +14,9 @@ export const store = reactive({
       })
   },
   checkIfAdded: function (reg) {
+    // console.log(reg)
     const carNamesArr = this.cars.map((car) => car.reg)
+    // carNamesArr.forEach((car) => console.log(car))
     return carNamesArr.includes(reg)
   }
 })

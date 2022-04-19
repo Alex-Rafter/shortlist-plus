@@ -10,7 +10,7 @@ import {
 import { ShortListReveal } from './shortlist-components/ShortListReveal.js'
   
 
-window.onload = () => store.checkIfSession()
+store.checkIfSession()
   
   createApp({
     store,
