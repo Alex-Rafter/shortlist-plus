@@ -1,0 +1,26 @@
+[v-cloak] {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.global-heart:after {
+    content: attr(data-count);
+}
+
+/* .local-heart:after {
+content: attr(data-select-msg);
+font-size: 1rem;
+} */
+
+.local-heart[data-select-msg="select"]:after {
+    content: "please select me";
+    font-size: 1rem;
+}
+
+.local-heart[data-select-msg="selected"]:after {
+    content: "you have selected me!";
+    font-size: 1rem;
+}
