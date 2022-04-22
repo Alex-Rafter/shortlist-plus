@@ -1,3 +1,4 @@
+<?php  include_once("./logic/used-car.php"); ?>
 <?php  include_once("./data.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
