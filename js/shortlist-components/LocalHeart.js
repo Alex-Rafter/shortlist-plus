@@ -1,10 +1,10 @@
-import { store } from './Store.js'
+import { store } from "./Store.js";
 
 export function LocalHeart(props) {
   return {
     $template: /*html*/ `
-          <span v-cloak ref="props.data.url" style="cursor:pointer;" @click.prevent="toggleShortlist" :class="carObj.addedToList === false ? 'local-heart icon icon-heart1 ${props.class}' : 'local-heart icon icon-heart2 ${props.class}'" :data-select-msg="carObj.addedToList === false ? 'select' : 'selected'" @vue:mounted="checkIfAdded"></span>`,
-
+          <span v-cloak ref="props.data.url" style="cursor:pointer;" @click.prevent="toggleShortlist" :class="carObj.addedToList === false ? 'local-heart icon icon-heart1 ${props.class}' : 'local-heart icon icon-heart2 ${props.class}'" :data-select-msg="carObj.addedToList === false ? 'select' : 'selected'" @vue:mounted="addToMountedArrAndSet()"></span>`,
+    //
     carObj: {
       url: props.data.url,
       manufacturer: props.data.manufacturer,
@@ -12,29 +12,47 @@ export function LocalHeart(props) {
       reg: props.data.reg,
       year: props.data.year,
       price: props.data.price,
-      addedToList: false
+      image: props.data.image,
+      addedToList: false,
     },
-
-    checkIfAdded() {
-      if (store.checkIfAdded(this.carObj.reg)) {
-        this.carObj.addedToList = true
-      } 
+    // Next Job : Add All Below to Store and Tweak Code 
+    //
+    addToMountedArrAndSet() {
+      store.carsMounted.push(this.carObj);
+      if (store.checkIfAdded(this.carObj.url))
+        this.setAddedToList(this.carObj, true);
     },
-
+    //
     toggleShortlist() {
       if (this.carObj.addedToList === false) {
-        if (!store.checkIfAdded(this.carObj.reg)) {
-          this.carObj.addedToList = true
-          store.cars.push(this.carObj)
-          sessionStorage.setItem('shortlist', JSON.stringify(store.cars))
-        } else {
-          this.carObj.addedToList = true
-        }
+        !store.checkIfAdded(this.carObj.url)
+          ? this.addToStoreAndSession()
+          : this.setAddedToList(this.carObj, true);
       } else {
-        this.carObj.addedToList = !this.carObj.addedToList
-        store.cars.splice(store.cars.indexOf(this.carObj), 1)
-        sessionStorage.setItem('shortlist', JSON.stringify(store.cars))
+        this.rmFromStoreAndSession();
       }
-    }
-  }
+    },
+    //
+    addToStoreAndSession() {
+      this.setAddedToList(this.carObj, true);
+      store.cars.push(this.carObj);
+      this.sessionSetItem();
+    },
+    //
+    rmFromStoreAndSession() {
+      this.setAddedToList(this.carObj, false);
+      store.cars.splice(store.cars.indexOf(this.carObj), 1);
+      this.sessionSetItem();
+    },
+    //
+    setAddedToList(carObj, bool) {
+      store.carsMounted.forEach((car) => {
+        if (car.url === carObj.url) car.addedToList = bool;
+      });
+    },
+    //
+    sessionSetItem() {
+      sessionStorage.setItem("shortlist", JSON.stringify(store.cars));
+    },
+  };
 }

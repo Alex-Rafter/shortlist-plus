@@ -1,0 +1,29 @@
+{
+  "name": "shortlist-lib",
+  "version": "1.0.0",
+  "description": "library of shortlist components for bluesky",
+  "main": "./js/index.js",
+  "scripts": {
+    "test": "test",
+    "build": "./node_modules/.bin/esbuild ./js/index.js --bundle --minify --outfile=./dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alex-Rafter/shortlist-lib.git"
+  },
+  "keywords": [
+    "shortlist",
+    "'petite",
+    "vue'"
+  ],
+  "author": "Alex Rafter",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Alex-Rafter/shortlist-lib/issues"
+  },
+  "homepage": "https://github.com/Alex-Rafter/shortlist-lib#readme",
+  "dependencies": {
+    "esbuild": "^0.14.36",
+    "petite-vue": "^0.4.1"
+  }
+}
