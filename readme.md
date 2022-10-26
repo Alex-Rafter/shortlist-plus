@@ -12,19 +12,21 @@ Designers are not always able to meet design briefs with the current implementat
 ## What is Shortlist Plus?
 
 
-Shortlist Plus is a small set of Petite Vue components that can be dropped on to both used vehicle list and used vehicle details pages. The components provide functionality for adding and removing shortlist items, and showing overall shortlist count anywhere on the page, with text and icon transitions triggered by user interaction. Shortlist Plus uses the browser's local storage to persist stored items between page reloads, and enable flexible and extremely fast rendering of stored shortlist items on any page across the site. 
+Shortlist Plus is a small set of Petite Vue components that can be dropped on to both used vehicle list and used vehicle details pages. The components provide functionality for adding and removing shortlist items, and showing overall shortlist count anywhere on the page, with text and icon transitions triggered by user interaction.
 
-The components can be integrated on to both builds and existing sites. This opens up a range of design possibilities for new builds, and also a potential new revenue stream as a bespoke product offering for existing customers.
+Shortlist Plus uses the browser's local storage to persist stored items between page reloads, and enable flexible and extremely fast rendering of stored shortlist items on any page across the site. 
+
+The components can be integrated on to both builds and existing sites. This opens up a range of design possibilities for new builds, and also a potential new revenue stream as a bespoke product for existing customers.
 
 
 
 ## Goals of the project 
 
 
-Solve the problem of adding shortlist on list pages. 
-Cut down on dev time, make shortlist more fun to work with, and make creative we design much easier to achieve with shortlist.
-Give simple and extendable solutions out of the box for commonly requested features such as shortlist count in site header, shortlist icon changes, text updates, and css transitions, following users adding or removing shortlist items.
-Make shortlist much faster.
+- Solve the problem of adding shortlist on list pages. 
+- Cut down on dev time, make shortlist more fun to work with, and make creative we design much easier to achieve with shortlist.
+- Give simple and extendable solutions out of the box for commonly requested features such as shortlist count in site header, shortlist icon changes, text updates, and css transitions, following users adding or removing shortlist items.
+- Make shortlist feel much faster for the user.
 
 
 ## Install 
