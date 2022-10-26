@@ -24,9 +24,10 @@ The components can be integrated on to both builds and existing sites. This open
 
 
 - Solve the problem of adding shortlist on list pages. 
-- Cut down on dev time, make shortlist more fun to work with, and make creative we design much easier to achieve with shortlist.
-- Give simple and extendable solutions out of the box for commonly requested features such as shortlist count in site header, shortlist icon changes, text updates, and css transitions, following users adding or removing shortlist items.
-- Make shortlist feel much faster for the user.
+- Cut down on dev time for integrating shortlist on builds.
+- Make shortlist more fun to work with, and make creative dev / design much easier to achieve with shortlist.
+- Give simple and extendable solutions out of the box for commonly requested features such as shortlist count in site header; shortlist icon changes, text updates, and css transitions, following user actions.
+- Make shortlist feel significantly faster for the end user.
 
 
 ## Install 
