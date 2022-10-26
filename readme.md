@@ -75,12 +75,13 @@ Use Local Heart inside any used vehicle repeater, or on any used vehicle details
 ```html
 <div 
 v-scope="
-LocalHeart(
-{
-    data : <?= $carOne->toProp() ?>, 
-    class : 'display-1 text-danger'
-}
-)">
+    LocalHeart(
+        {
+            data : <?= $carOne->toProp() ?>, 
+            class : 'display-1 text-danger'
+        }
+    )
+">
 </div>
 ```
 
@@ -116,13 +117,13 @@ Use Local Text on any repeater or used vehcile details page to add text that wil
 ```html
 <div
  v-scope="
- LocalText(
- {
-    data : <?= $carOne->toProp() ?>, 
-    defaultText: 'not added', 
-    addedText : 'added!', 
-    class : 'display-1 text-danger'
- }
+    LocalText(
+        {
+            data : <?= $carOne->toProp() ?>, 
+            defaultText: 'not added', 
+            addedText : 'added!', 
+            class : 'display-1 text-danger'
+        }
  )">
  </div>
 ```
@@ -202,27 +203,27 @@ Shortlist Items can be displayed using petite vue template syntax and vue direct
 ##### Shortlist Items as cards
 
 ```html
-       <!-- Short List Cars : START -->
-          <div v-scope="ShortListData()" v-cloak :class="store.reveal === false ? 'd-none' : ''">
-            <!-- No Items -->
-            <div v-if="store.count === 0">
-              <p>Add some items to your shortlist</p>
-            </div>
-            <!-- With Items -->
-            <div v-else>
-              <div v-for="car in data" class="card">
-                <div class="card">
-                  <img :src="car.url" class="card-img-top" :alt="...">
-                  <div class="card-body">
+<!-- Short List Cars : START -->
+<div v-scope="ShortListData()" v-cloak :class="store.reveal === false ? 'd-none' : ''">
+    <!-- No Items -->
+    <div v-if="store.count === 0">
+        <p>Add some items to your shortlist</p>
+    </div>
+    <!-- With Items -->
+    <div v-else>
+        <div v-for="car in data" class="card">
+            <div class="card">
+                <img :src="car.url" class="card-img-top" :alt="...">
+                <div class="card-body">
                     <h5 class="card-title">{{car.make}}</h5>
                     <p class="card-text">{{car.reg}}</p>
                     <a href="#" class="btn btn-primary">{{car.url}}</a>
-                  </div>
                 </div>
-              </div>
             </div>
-          </div>
-          <!-- Short List Cars : END -->
+        </div>
+    </div>
+</div>
+<!-- Short List Cars : END -->
 ```
 
 
