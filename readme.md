@@ -36,8 +36,11 @@ The components can be integrated on to both builds and existing sites. This open
 ### Easy Way (Bash / Git Bash)
 
 
-Paste the following commands into your terminal while in the root of your Bluesky project.
-curl 'url' > save-location; bash filename.sh
+Paste the following commands into your terminal **while in the root of your Bluesky project.**
+
+<br>
+
+`curl 'url' > save-location; bash filename.sh`
 
 Once the script has download and run you are good to move on to adding shortlist plus to your repeaters and details pages. 
 
@@ -96,6 +99,7 @@ For most use cases you shouldn't need to tweak either the include or the display
 
 ##### Class Prop
 To customise the component's styles, pass any css classes as a single string to the class prop  e.g
+
 `class : 'display-1 text-danger'`
 
 
