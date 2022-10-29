@@ -51,7 +51,10 @@ Once the script has download and run you are good to move on to adding shortlist
 Install Petite Vue with npm or use the cdn via script tag
 https://github.com/vuejs/petite-vue
 
-Install the lib files following this directory structure
+Install the lib files
+- js and scss in your projects's /src/ directory, 
+- shortlist-data.aspx in a directory with this path /inc/modules/shortlist
+
 
 You are good to move on to adding shortlist plus to your repeaters and details pages. 
 
@@ -88,7 +91,7 @@ v-scope="
 ```
 
 <details>
-    <summary>Advanced</summary>
+    <summary>More</summary>
 
 
 ##### Data Prop : 
@@ -133,7 +136,7 @@ Use Local Text on any repeater or used vehcile details page to add text that wil
 ```
 
 <details>
-<summary>Advanced</summary>
+<summary>More</summary>
 
 
 ##### Data Prop : 
@@ -183,7 +186,7 @@ GlobalHeart(
 </div>
 ```
 <details>
-<summary>Advanced</summary>
+<summary>More</summary>
 
 
 ##### Class Prop
@@ -248,8 +251,8 @@ Shortlist Items can be displayed using petite vue template syntax and vue direct
 The Shortlist Store contains the logic used for adding and removing items from the shortlist, and for persistence of the shortlist data via the browser's local storage. The store performs checks on all all currently held items before adding anything new. This is what enables us to use multiple Local Hearts across each repeater and details page without risk of duplicates being added to Shortlist.
 
 <details>
-<summary>Advanced</summary>
------------------------
+<summary>More</summary>
+
 If you want to get stuck in with the store's logic open  ./store.js. This might be useful if, for example, you want to add any other reactive (link) data that is available to all the components used, and any related methods.
 
 </details>
