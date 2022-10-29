@@ -38,7 +38,9 @@ The components can be integrated on to both builds and existing sites. This open
 
 Paste the following commands into your terminal **while in the root of your Bluesky project.**
 
-`curl 'https://raw.githubusercontent.com/Alex-Rafter/shortlist-lib/main/scripts/sl.sh' | bash`
+```shell
+curl 'https://raw.githubusercontent.com/Alex-Rafter/shortlist-lib/main/scripts/sl.sh' | bash
+```
 
 Once the script has download and run you are good to move on to adding shortlist plus to your repeaters and details pages.
 
