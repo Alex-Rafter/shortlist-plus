@@ -38,9 +38,9 @@ The components can be integrated on to both builds and existing sites. This open
 
 Paste the following commands into your terminal **while in the root of your Bluesky project.**
 
-`curl 'https://gist.githubusercontent.com/Alex-Rafter/ed7b76308dc786c0fda42ddb7cf06404/raw/af60e4d9dfd69031d381ee0d82a324a03845ceac/sl.sh' | bash`
+`curl 'https://raw.githubusercontent.com/Alex-Rafter/shortlist-lib/main/scripts/sl.sh' | bash`
 
-Once the script has download and run you are good to move on to adding shortlist plus to your repeaters and details pages. 
+Once the script has download and run you are good to move on to adding shortlist plus to your repeaters and details pages.
 
 
 ### Manual Way
@@ -85,8 +85,8 @@ v-scope="
 </div>
 ```
 
-
-#### Advanced
+<details>
+    <summary>Advanced</summary>
 
 
 ##### Data Prop : 
@@ -104,6 +104,8 @@ To customise the component's styles, pass any css classes as a single string to 
 
 ##### Component Template
 If you need to tweak the component template, open ./Local-Heart.js and you'll find it as the value to  $template.
+
+</details>
 
 
 ### Local Text
@@ -128,8 +130,8 @@ Use Local Text on any repeater or used vehcile details page to add text that wil
  </div>
 ```
 
-
-#### Advanced 
+<details>
+<summary>Advanced</summary>
 
 
 ##### Data Prop : 
@@ -154,6 +156,8 @@ To customise the component's styles, pass any css classes as a single string to 
 ##### Component Template
 If you need to tweak the component template, open ./Local-Text.js and you'll find it as the value to  $template.
 
+</details>
+
 
 ### Global Heart
 
@@ -176,8 +180,8 @@ GlobalHeart(
 )">
 </div>
 ```
-
-#### Advanced
+<details>
+<summary>Advanced</summary>
 
 
 ##### Class Prop
@@ -192,6 +196,7 @@ Shortlist count is added as a pseudo element with default styles stored in /src/
 ##### Component Template
 If you need to tweak the component template, open ./Global-Text.js and you'll find it as the value to  $template.
 
+</details>
 
 ### Rendering Shortlist Items
 
@@ -240,7 +245,10 @@ Shortlist Items can be displayed using petite vue template syntax and vue direct
 ##### Intro
 The Shortlist Store contains the logic used for adding and removing items from the shortlist, and for persistence of the shortlist data via the browser's local storage. The store performs checks on all all currently held items before adding anything new. This is what enables us to use multiple Local Hearts across each repeater and details page without risk of duplicates being added to Shortlist.
 
-
-##### Advanced
+<details>
+<summary>Advanced</summary>
 -----------------------
 If you want to get stuck in with the store's logic open  ./store.js. This might be useful if, for example, you want to add any other reactive (link) data that is available to all the components used, and any related methods.
+
+</details>
+
