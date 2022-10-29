@@ -2,6 +2,7 @@
 
 # Download all the files needed
 git remote add shortlist https://github.com/Alex-Rafter/shortlist-lib.git
+git co dev
 git checkout -b sl-branch
 git checkout -b shortlist
 git pull shortlist main -X theirs --allow-unrelated-histories
