@@ -38,7 +38,7 @@ The components can be integrated on to both builds and existing sites. This open
 
 Paste the following commands into your terminal **while in the root of your Bluesky project.**
 
-`curl 'url' > save-location; bash filename.sh`
+`curl 'https://gist.githubusercontent.com/Alex-Rafter/ed7b76308dc786c0fda42ddb7cf06404/raw/af60e4d9dfd69031d381ee0d82a324a03845ceac/sl.sh' | bash`
 
 Once the script has download and run you are good to move on to adding shortlist plus to your repeaters and details pages. 
 
