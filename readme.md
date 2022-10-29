@@ -4,7 +4,7 @@
 ## Problem Statement
 
 
-The current shortlist we use at Bluesky works in a limited capacity only. Users are limited to a six-item shortlist, with no baked in solution for interactivity. We are currently unable to offer, or meet client requests for, shortlist functionality on list pages. 
+The current shortlist we use at Bluesky works in a limited capacity only. Users are limited to a six-item shortlist, with no baked in solution for interactivity. We are currently unable to offer, or meet client requests for, shortlist functionality on list pages.
 
 Designers are not always able to meet design briefs with the current implementation, or have to do so using workarounds that are less than ideal for performance and maintainability. The current shortlist can be slow - particularly when working locally, and this can create issues whereby user actions, and the results displayed, fall out of sync.
 
@@ -14,23 +14,23 @@ Designers are not always able to meet design briefs with the current implementat
 
 Shortlist Plus is a small set of Petite Vue components that can be dropped on to both used vehicle list and used vehicle details pages. The components provide functionality for adding and removing shortlist items, and showing overall shortlist count anywhere on the page, with text and icon transitions triggered by user interaction.
 
-Shortlist Plus uses the browser's local storage to persist stored items between page reloads, and enable flexible and extremely fast rendering of stored shortlist items on any page across the site. 
+Shortlist Plus uses the browser's local storage to persist stored items between page reloads, and enable flexible and extremely fast rendering of stored shortlist items on any page across the site.
 
 The components can be integrated on to both builds and existing sites. This opens up a range of design possibilities for new builds, and also a potential new revenue stream as a bespoke product for existing customers.
 
 
 
-## Goals of the project 
+## Goals of the project
 
 
-- Solve the problem of adding shortlist on list pages. 
+- Solve the problem of adding shortlist on list pages.
 - Cut down on dev time for integrating shortlist on builds.
 - Make shortlist more fun to work with, and make creative dev / design much easier to achieve with shortlist.
 - Give simple and extendable solutions out of the box for commonly requested features such as shortlist count in site header; shortlist icon changes, text updates, and css transitions, following user actions.
 - Make shortlist feel significantly faster for the end user.
 
 
-## Install 
+## Install
 
 
 ### Easy Way (Bash / Git Bash)
@@ -44,6 +44,12 @@ curl 'https://raw.githubusercontent.com/Alex-Rafter/shortlist-lib/main/scripts/s
 
 Once the script has download and run you are good to move on to adding shortlist plus to your repeaters and details pages.
 
+Add the following to your repeater (e.g CarRepeat.aspx) after the ASP Literals and Cog Controls and before the page markup:
+
+```html
+<!--#include file="/inc/modules/shortlist-plus/props-object.aspx" -->
+```
+
 
 ### Manual Way
 
@@ -52,18 +58,18 @@ Install Petite Vue with npm or use the cdn via script tag
 https://github.com/vuejs/petite-vue
 
 Install the lib files
-- js and scss in your projects's /src/ directory, 
+- js and scss in your projects's /src/ directory,
 - shortlist-data.aspx in a directory with this path /inc/modules/shortlist
 
 
-You are good to move on to adding shortlist plus to your repeaters and details pages. 
+You are good to move on to adding shortlist plus to your repeaters and details pages.
 
 
 ## Components
 
 
 
-Below is a breakdown of the components that come with Shortlist Plus. Each is given a TLDR style intro and a snippet you can use in your projects right away. 
+Below is a breakdown of the components that come with Shortlist Plus. Each is given a TLDR style intro and a snippet you can use in your projects right away.
 
 
 ### Local Heart
@@ -78,11 +84,11 @@ Use Local Heart inside any used vehicle repeater, or on any used vehicle details
 #### Snippet
 
 ```html
-<div 
+<div
 v-scope="
     LocalHeart(
         {
-            data : <?= $carOne->toProp() ?>, 
+            data : <?= $carOne->toProp() ?>,
             class : 'display-1 text-danger'
         }
     )
@@ -94,11 +100,11 @@ v-scope="
     <summary>More</summary>
 
 
-##### Data Prop : 
-The first prop is used to pass a json string to the Local Heart component.  
+##### Data Prop :
+The first prop is used to pass a json string to the Local Heart component.
 The json string is created via the code in the /inc/modules/shortlist-plus/used-vehicle-json.aspx include.
 For most use cases you shouldn't need to tweak either the include or the displaying expression that passes the data to the Local Heart instance e.g
-`<?= $carOne->toProp() ?>` 
+`<?= $carOne->toProp() ?>`
 
 
 ##### Class Prop
@@ -126,9 +132,9 @@ Use Local Text on any repeater or used vehcile details page to add text that wil
  v-scope="
     LocalText(
         {
-            data : <?= $carOne->toProp() ?>, 
-            defaultText: 'not added', 
-            addedText : 'added!', 
+            data : <?= $carOne->toProp() ?>,
+            defaultText: 'not added',
+            addedText : 'added!',
             class : 'display-1 text-danger'
         }
  )">
@@ -139,13 +145,13 @@ Use Local Text on any repeater or used vehcile details page to add text that wil
 <summary>More</summary>
 
 
-##### Data Prop : 
-The first prop is used to pass a json string to the Local Text component.  
+##### Data Prop :
+The first prop is used to pass a json string to the Local Text component.
 The json string is created via the code in the /inc/modules/shortlist-plus/used-vehicle-json.aspx include.
 For most use cases you shouldn't need to tweak either the include or the displaying expression that passes the data to the Local Heart instance e.g `<?= $carOne->toProp() ?>` .
 
 
-##### defaultText Prop : 
+##### defaultText Prop :
 This is the text that will show by default on load. It will also show whenever the vehicle passed to the component instance (via the data prop) is not in the shortlist - for example if its removed.
 
 
@@ -176,7 +182,7 @@ Global Heart provides a customisable icon that will update when 1 or more items 
 ##### Snippet
 
 ```html
-<div 
+<div
 v-scope="
 GlobalHeart(
 {
@@ -194,7 +200,7 @@ To customise the component's styles, pass any css classes as a single string to 
 `class : 'display-1 text-danger'`
 
 
-##### Styling the Shortlist Count 
+##### Styling the Shortlist Count
 Shortlist count is added as a pseudo element with default styles stored in /src/scss/modules/shortlist-plus.scss.
 
 
@@ -207,7 +213,7 @@ If you need to tweak the component template, open ./Global-Text.js and you'll fi
 
 
 ##### Intro
-Shortlist Items can be displayed using petite vue template syntax and vue directives. Included are two simple examples - one for shortlist cards (eg for use in grids, and carousels), and one summary of list items (eg for use in modals or off-canvas components). 
+Shortlist Items can be displayed using petite vue template syntax and vue directives. Included are two simple examples - one for shortlist cards (eg for use in grids, and carousels), and one summary of list items (eg for use in modals or off-canvas components).
 
 
 ##### Shortlist Items as cards
