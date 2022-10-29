@@ -239,9 +239,7 @@ Shortlist Items can be displayed using petite vue template syntax and vue direct
 
 ##### Shortlist Items as summary list items
 
-
-
-### Extra Spice : 
+To add here.
 
 
 #### Shortlist Store
