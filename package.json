@@ -1,0 +1,27 @@
+{
+  "name": "shortlist-plus",
+  "version": "1.0.0",
+  "description": "petite vue component library and installer script",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alex-Rafter/shortlist-lib.git"
+  },
+  "keywords": [
+    "'petite",
+    "vue'"
+  ],
+  "author": "Alex Rafter",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Alex-Rafter/shortlist-lib/issues"
+  },
+  "homepage": "https://github.com/Alex-Rafter/shortlist-lib#readme",
+  "devDependencies": {
+    "esbuild": "^0.15.12",
+    "standard": "^17.0.0"
+  }
+}
