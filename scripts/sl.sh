@@ -3,19 +3,16 @@
 # Download all the files needed
 git remote add shortlist https://github.com/Alex-Rafter/shortlist-lib.git
 git co dev
-git checkout -b sl-branch
-git checkout -b shortlist
-git pull shortlist main -X theirs --allow-unrelated-histories
-git checkout sl-branch
-git checkout shortlist -- 'src/js/shortlist-plus/*.js'
-git checkout shortlist -- 'src/scss/app/theme/components/_shortlist-plus.scss'
-git checkout shortlist -- 'inc/modules/shortlist-plus/*.aspx'
+git checkout -b shortlist-plus
+git fetch shortlist main
+git checkout shortlist/main -- 'src/js/shortlist-plus/*.js'
+git checkout shortlist/main -- 'src/scss/app/theme/components/_shortlist-plus.scss'
+git checkout shortlist/main -- 'inc/modules/shortlist-plus/*.aspx'
 
 # add sj scss to index.scss
-echo '@import "shortlist-plus";' >> 'src/scss/app/theme/components/index.scss'
+printf "\n%s" '@import "shortlist-plus";' >> 'src/scss/app/theme/components/index.scss'
 
 # add js-import to js-foot.aspx
-echo '<!--#include file="/inc/modules/shortlist-plus/js-import.aspx" -->' >> 'inc/js/js-head.aspx'
+printf "\n%s" '<!--#include file="/inc/modules/shortlist-plus/js-import.aspx" -->' >> 'inc/js/js-head.aspx'
 
-git branch -D shortlist
 git remote remove shortlist
