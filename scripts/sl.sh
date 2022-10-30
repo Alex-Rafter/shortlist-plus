@@ -15,7 +15,7 @@ git checkout shortlist -- 'inc/modules/shortlist-plus/*.aspx'
 echo '@import "shortlist-plus";' >> 'src/scss/app/theme/components/index.scss'
 
 # add js-import to js-foot.aspx
-echo '<!--#include file="/inc/modules/shortlist-plus/js-import.aspx" -->' >> 'inc/js/js-foot.aspx'
+echo '<!--#include file="/inc/modules/shortlist-plus/js-import.aspx" -->' >> 'inc/js/js-head.aspx'
 
 git branch -D shortlist
 git remote remove shortlist
