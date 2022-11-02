@@ -5,7 +5,7 @@ git remote add shortlist https://github.com/Alex-Rafter/shortlist-lib.git
 git co dev
 git checkout -b shortlist-plus
 git fetch shortlist main
-git checkout shortlist/main -- 'src/js/shortlist-plus/*.js'
+git checkout shortlist/main -- 'js/*.js'
 git checkout shortlist/main -- 'src/scss/app/theme/components/_shortlist-plus.scss'
 git checkout shortlist/main -- 'inc/modules/shortlist-plus/*.aspx'
 
