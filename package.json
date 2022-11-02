@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "petite vue component library and installer script",
   "main": "index.js",
+  "type": "module",
   "scripts": {
+    "build": "esbuild src/js/shortlist-plus/index.js --bundle --outfile=js/shortlist-plus/index-2.js --minify",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -23,5 +25,8 @@
   "devDependencies": {
     "esbuild": "^0.15.12",
     "standard": "^17.0.0"
+  },
+  "dependencies": {
+    "petite-vue": "^0.4.1"
   }
 }
