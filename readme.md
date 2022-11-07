@@ -107,7 +107,7 @@ To customise the component's styles, pass any css classes as a single string to 
 
 
 ##### Component Template
-If you need to tweak the component template, open ./Local-Heart.js and you'll find it as the value to  $template.
+If you need to tweak the component template, open /js/shortlist-plus/components/LocalHeart.js and you'll find it as the value to  $template.
 
 </details>
 
@@ -117,7 +117,7 @@ If you need to tweak the component template, open ./Local-Heart.js and you'll fi
 
 
 #### Intro
-Use Local Text on any repeater or used vehcile details page to add text that will update in tandem with the vehicles's add / remove state. Useful for adding messages such as 'add to shortlist' / 'added to shortlist' on vehicle cards.
+Use Local Text on any repeater or used vehicle details page to add text that will update in tandem with the vehicles's add / remove state. Useful for adding messages such as 'add to shortlist' / 'added to shortlist' on vehicle cards.
 
 
 ```html
@@ -148,7 +148,7 @@ To customise the component's styles, pass any css classes as a single string to 
 
 
 ##### Component Template
-If you need to tweak the component template, open ./Local-Text.js and you'll find it as the value to  $template.
+If you need to tweak the component template, open /js/shortlist-plus/components/LocalText.js and you'll find it as the value to  $template.
 
 </details>
 
@@ -181,7 +181,31 @@ Shortlist count is added as a pseudo element with default styles stored in /src/
 
 
 ##### Component Template
-If you need to tweak the component template, open ./Global-Text.js and you'll find it as the value to  $template.
+If you need to tweak the component template, open /js/shortlist-plus/components/GlobalHeart.js and you'll find it as the value to  $template.
+
+</details>
+
+
+### Shortlist Reveal
+This component is designed to be used in tandem with the ShortListData component. Where ShortListData controls how you render the shortlist items, ShortListReveal gives you a convenient way to show / hide the shortlist. This could be useful if, for example, you want users to be able to check their shortlist without leaving the current page via hidden-but-toggleable element.
+
+
+##### Snippet
+
+```html
+<div v-scope="ShortListReveal({class : 'btn-outline-success', text : 'show shortlist'})"></div>
+```
+
+<details>
+<summary>More</summary>
+
+
+##### Class Prop
+By default ShortListReveal uses bootstrap's btn btn-primary button classes. The base 'btn' class is applied regardless of props passed, so to update button's bootstrap class you need only pass 'btn-secondary' or 'btn-outline-success', for example.
+
+
+##### Component Template
+If you need to tweak the component template, open /js/shortlist-plus/components/ShortListReveal.js and you'll find it as the value to  $template.
 
 </details>
 
