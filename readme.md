@@ -186,6 +186,57 @@ If you need to tweak the component template, open /js/shortlist-plus/components/
 </details>
 
 
+### Shortlist Data
+This component is used to render the items stored in the shortlist to the page. By using vue's v-for directive, we can create a DRY template, with access to all shortlist items and their data. We can use this to create a full shortlist page with vehicle cards, or to create smaller summary lists, eg for use in modals or offcanvas elements.
+
+Here is an example of the Shortlist Data component being used with some vue directives. In this example the list items are shown / hidden with a toggle, and there is an additional message to the user if no items are stored in their shortlist. 
+
+```html
+<!-- Short List Cars : START -->
+<div v-scope="ShortListData()" v-cloak :class="store.reveal === false ? 'd-none' : ''">
+    <!-- No Items -->
+    <div v-if="store.count === 0">
+        <p>Add some items to your shortlist</p>
+    </div>
+    <!-- With Items -->
+    <div v-else>
+        <div v-for="car in data" class="card">
+            <div class="card">
+                <img :src="car.url" class="card-img-top" :alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{car.make}}</h5>
+                    <p class="card-text">{{car.reg}}</p>
+                    <a href="#" class="btn btn-primary">{{car.url}}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Short List Cars : END -->
+```
+
+<details>
+<summary>More</summary>
+
+
+##### Data accessible for each Shortlist item 
+
+- url
+- manufacturer
+- model
+- reg
+- year
+- price
+- image
+- addedToList
+
+#### Petite Vue / Vue Compatible Directives
+
+https://github.com/vuejs/petite-vue#user-content-vue-compatible
+
+</details>
+
+
 ### Shortlist Reveal
 This component is designed to be used in tandem with the ShortListData component. Where ShortListData controls how you render the shortlist items, ShortListReveal gives you a convenient way to show / hide the shortlist. This could be useful if, for example, you want users to be able to check their shortlist without leaving the current page via hidden-but-toggleable element.
 
