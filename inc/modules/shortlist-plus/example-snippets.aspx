@@ -6,13 +6,13 @@ Copy and paste into your project as you need.
 **********************
 --%>
 <!-- Global Heart -->
-<div v-scope="GlobalHeart({class : 'display-1 text-dark'})"></div>
+<div v-scope="GlobalHeart({childClass : 'text-secondary'})"></div>
 
 <!-- Local Heart -->
-<div v-scope="LocalHeart({data : <%= PropObj %>, class : 'display-1 text-danger'})"></div>
+<div v-scope="LocalHeart({data : <%= PropObj %>, childClass : 'text-danger'})"></div>
 
 <!-- ShortList Reveal -->
-<div v-scope="ShortListReveal({text : 'my shortlist', class: 'btn-secondary'})"></div>
+<div v-scope="ShortListReveal({childClass : 'btn-secondary', text : 'show shortlist'})"></div>
 
 <!-- Short List Cars : START -->
 <div v-scope="ShortListData()" v-cloak :class="store.reveal === false ? 'd-none' : ''">
