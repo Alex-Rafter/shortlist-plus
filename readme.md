@@ -80,6 +80,8 @@ Below is a breakdown of the components that come with Shortlist Plus. Each is gi
 
 Use Local Heart inside any used vehicle repeater, or on any used vehicle details page, that you want to include shortlist add / remove functionality to. The component will update the icon based on the vehicle's added / removed state (see below for customisation).  You can add as many copies of Local Heart to a repeater or details page and all will update together as the vehicle add / remove state is changed.
 
+Local Heart also provides a way to render an additional message to the user based on added / removed state via an :after pseudo selector. To customise the message and its styling, check out shortlist-plus.scss. 
+
 
 #### Snippet
 
