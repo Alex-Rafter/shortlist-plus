@@ -1,10 +1,11 @@
 export function GlobalHeart (props) {
   return {
+    childClass : props.childClass,
     $template: /* html */ `
-    <span 
-    v-cloak 
+    <span
+    v-cloak
     class="global-heart"
-    :class='props.class === undefined ? "" : props.class'
+    :class='childClass !== undefined && childClass'
     :data-count="store.count"
     >
       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">

@@ -2,15 +2,16 @@ import { store } from './Store.js'
 
 export function LocalHeart (props) {
   return {
+    childClass : props.childClass,
     $template: /* html */ `
-          <span 
-          v-cloak 
-          ref="props.data.url" 
-          style="cursor:pointer;" 
-          @click.prevent="toggleShortlist" 
+          <span
+          v-cloak
+          ref="props.data.url"
+          style="cursor:pointer;"
+          @click.prevent="toggleShortlist"
           class="local-heart"
-          :class="props.class"
-          :data-select-msg="carObj.addedToList === false ? 'select' : 'selected'" 
+          :class="childClass !== undefined && childClass"
+          :data-select-msg="carObj.addedToList === false ? 'select' : 'selected'"
           @vue:mounted="addToMountedArrAndSet()"
           >
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">

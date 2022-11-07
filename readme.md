@@ -86,7 +86,7 @@ Local Heart also provides a way to render an additional message to the user base
 #### Snippet
 
 ```html
-<div v-scope="LocalHeart({data : <%= PropObj %>, class : 'display-1 text-danger'})"></div>
+<div v-scope="LocalHeart({data : <%= PropObj %>, childClass : 'text-danger'})"></div>
 ```
 
 <details>
@@ -97,13 +97,13 @@ Local Heart also provides a way to render an additional message to the user base
 The first prop is used to pass a json string to the Local Heart component.
 The json string is created via the code in the /inc/modules/shortlist-plus/used-vehicle-json.aspx include.
 For most use cases you shouldn't need to tweak either the include or the displaying expression that passes the data to the Local Heart instance e.g
-`<?= $carOne->toProp() ?>`
+`<%= PropObj %>`
 
 
 ##### Class Prop
 To customise the component's styles, pass any css classes as a single string to the class prop  e.g
 
-`class : 'display-1 text-danger'`
+`childClass : 'display-1 text-danger'`
 
 
 ##### Component Template
@@ -124,7 +124,7 @@ Global Heart provides a customisable icon that will update when 1 or more items 
 ##### Snippet
 
 ```html
-<div v-scope="GlobalHeart({class : 'display-1 text-dark'})"></div>
+<div v-scope="GlobalHeart({childClass : 'text-secondary'})"></div>
 ```
 <details>
 <summary>More</summary>
@@ -132,7 +132,7 @@ Global Heart provides a customisable icon that will update when 1 or more items 
 
 ##### Class Prop
 To customise the component's styles, pass any css classes as a single string to the class prop  e.g
-`class : 'display-1 text-danger'`
+`childClass : 'display-1 text-danger'`
 
 
 ##### Styling the Shortlist Count
@@ -153,23 +153,23 @@ Here is an example of the Shortlist Data component being used with some vue dire
 ```html
 <!-- Short List Cars : START -->
 <div v-scope="ShortListData()" v-cloak :class="store.reveal === false ? 'd-none' : ''">
-    <!-- No Items -->
-    <div v-if="store.count === 0">
-        <p>Add some items to your shortlist</p>
-    </div>
-    <!-- With Items -->
-    <div v-else>
-        <div v-for="car in data" class="card">
-            <div class="card">
-                <img :src="car.url" class="card-img-top" :alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">{{car.make}}</h5>
-                    <p class="card-text">{{car.reg}}</p>
-                    <a href="#" class="btn btn-primary">{{car.url}}</a>
-                </div>
-            </div>
-        </div>
-    </div>
+  <!-- No Items -->
+  <div v-if="store.count === 0">
+      <p>Add some items to your shortlist</p>
+  </div>
+  <!-- With Items -->
+  <div v-else>
+      <div v-for="car in data" class="card">
+          <div class="card">
+              <img :src="car.image" class="card-img-top" :alt="...">
+              <div class="card-body">
+                  <h5 class="card-title">{{car.manufacturer}} {{car.model}}</h5>
+                  <p class="card-text">{{car.reg}}</p>
+                  <a href="#" class="btn btn-primary">{{car.url}}</a>
+              </div>
+          </div>
+      </div>
+  </div>
 </div>
 <!-- Short List Cars : END -->
 ```
@@ -203,7 +203,7 @@ This component is designed to be used in tandem with the ShortListData component
 ##### Snippet
 
 ```html
-<div v-scope="ShortListReveal({class : 'btn-outline-success', text : 'show shortlist'})"></div>
+<div v-scope="ShortListReveal({childClass : 'btn-secondary', text : 'show shortlist'})"></div>
 ```
 
 <details>

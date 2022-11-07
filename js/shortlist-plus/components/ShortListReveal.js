@@ -2,12 +2,14 @@ import { store } from './Store.js'
 
 export function ShortListReveal (props) {
   return {
+    childClass : props.childClass,
+    text : props.text,
     $template: /* html */ `
-        <button 
+        <button
         v-cloak
-        class="btn"  
-        :class="props.class === undefined ? 'btn-primary' : props.class"
-        @click.prevent="show">${props.text === undefined ? 'reveal' : props.text}</button> `,
+        class="btn"
+        :class="childClass === undefined ? 'btn-primary' : childClass"
+        @click.prevent="show">{{text === undefined ? 'reveal' : text}}</button> `,
     show () {
       store.reveal = !store.reveal
     }
