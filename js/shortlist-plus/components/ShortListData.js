@@ -1,15 +1,7 @@
-see-the-source</p>
+import { store } from './Store.js'
 
-            </div>
-            
-                    </div>
-                    
-                        </foreignobject>
-                        
-                        </svg>import { store } from './Store.js'
-  
-export function ShortListData() {
-    return {
-        data: store.cars,
-    }
+export function ShortListData () {
+  return {
+    data: store.cars
+  }
 }
