@@ -112,47 +112,6 @@ If you need to tweak the component template, open /js/shortlist-plus/components/
 </details>
 
 
-### Local Text
-
-
-
-#### Intro
-Use Local Text on any repeater or used vehicle details page to add text that will update in tandem with the vehicles's add / remove state. Useful for adding messages such as 'add to shortlist' / 'added to shortlist' on vehicle cards.
-
-
-```html
-<div v-scope="LocalText({data : <%= PropObj %>, defaultText: 'not added', addedText : 'added!', class : 'display-1 text-danger'})"></div>
-```
-
-<details>
-<summary>More</summary>
-
-
-##### Data Prop :
-The first prop is used to pass a json string to the Local Text component.
-The json string is created via the code in the /inc/modules/shortlist-plus/used-vehicle-json.aspx include.
-For most use cases you shouldn't need to tweak either the include or the displaying expression that passes the data to the Local Heart instance e.g `<?= $carOne->toProp() ?>` .
-
-
-##### defaultText Prop :
-This is the text that will show by default on load. It will also show whenever the vehicle passed to the component instance (via the data prop) is not in the shortlist - for example if its removed.
-
-
-##### addedText Prop :
-This is the text that will show whenever the vehicle passed to the component instance (via the data prop) is in the shortlist
-
-
-##### Class Prop
-To customise the component's styles, pass any css classes as a single string to the class prop  e.g
-`class : 'display-1 text-danger'`
-
-
-##### Component Template
-If you need to tweak the component template, open /js/shortlist-plus/components/LocalText.js and you'll find it as the value to  $template.
-
-</details>
-
-
 ### Global Heart
 
 
@@ -261,7 +220,7 @@ If you need to tweak the component template, open /js/shortlist-plus/components/
 </details>
 
 
-#### Shortlist Store
+### Shortlist Store
 
 
 ##### Intro
