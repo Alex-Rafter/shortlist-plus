@@ -260,44 +260,6 @@ If you need to tweak the component template, open /js/shortlist-plus/components/
 
 </details>
 
-### Rendering Shortlist Items
-
-
-##### Intro
-Shortlist Items can be displayed using petite vue template syntax and vue directives. Included are two simple examples - one for shortlist cards (eg for use in grids, and carousels), and one summary of list items (eg for use in modals or off-canvas components).
-
-
-##### Shortlist Items as cards
-
-```html
-<!-- Short List Cars : START -->
-<div v-scope="ShortListData()" v-cloak :class="store.reveal === false ? 'd-none' : ''">
-    <!-- No Items -->
-    <div v-if="store.count === 0">
-        <p>Add some items to your shortlist</p>
-    </div>
-    <!-- With Items -->
-    <div v-else>
-        <div v-for="car in data" class="card">
-            <div class="card">
-                <img :src="car.url" class="card-img-top" :alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">{{car.make}}</h5>
-                    <p class="card-text">{{car.reg}}</p>
-                    <a href="#" class="btn btn-primary">{{car.url}}</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Short List Cars : END -->
-```
-
-
-##### Shortlist Items as summary list items
-
-To add here.
-
 
 #### Shortlist Store
 
@@ -308,7 +270,9 @@ The Shortlist Store contains the logic used for adding and removing items from t
 <details>
 <summary>More</summary>
 
-If you want to get stuck in with the store's logic open  ./store.js. This might be useful if, for example, you want to add any other reactive (link) data that is available to all the components used, and any related methods.
+If you want to get stuck in with the store's logic open  /js/shortlist-plus/components/Store.js. This might be useful if, for example, you want to add to the (reactive) global state available to all the components used.
+
+If you want to learn more about the store, check out the [global state management info on the petite vue docs](https://github.com/vuejs/petite-vue#user-content-global-state-management)
 
 </details>
 
