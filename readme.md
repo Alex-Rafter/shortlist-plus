@@ -84,16 +84,7 @@ Use Local Heart inside any used vehicle repeater, or on any used vehicle details
 #### Snippet
 
 ```html
-<div
-v-scope="
-    LocalHeart(
-        {
-            data : <?= $carOne->toProp() ?>,
-            class : 'display-1 text-danger'
-        }
-    )
-">
-</div>
+<div v-scope="LocalHeart({data : <%= PropObj %>, class : 'display-1 text-danger'})"></div>
 ```
 
 <details>
@@ -128,17 +119,7 @@ Use Local Text on any repeater or used vehcile details page to add text that wil
 
 
 ```html
-<div
- v-scope="
-    LocalText(
-        {
-            data : <?= $carOne->toProp() ?>,
-            defaultText: 'not added',
-            addedText : 'added!',
-            class : 'display-1 text-danger'
-        }
- )">
- </div>
+<div v-scope="LocalText({data : <%= PropObj %>, defaultText: 'not added', addedText : 'added!', class : 'display-1 text-danger'})"></div>
 ```
 
 <details>
@@ -182,14 +163,7 @@ Global Heart provides a customisable icon that will update when 1 or more items 
 ##### Snippet
 
 ```html
-<div
-v-scope="
-GlobalHeart(
-{
-    class : 'display-1 text-dark'
-}
-)">
-</div>
+<div v-scope="GlobalHeart({class : 'display-1 text-dark'})"></div>
 ```
 <details>
 <summary>More</summary>
