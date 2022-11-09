@@ -1,5 +1,12 @@
 # Shortlist Plus
 
+Shortlist Plus is a small set of Petite Vue components that can be dropped on to both used vehicle list and used vehicle details pages. The components provide functionality for adding and removing shortlist items, and showing overall shortlist count anywhere on the page, with text and icon transitions triggered by user interaction.
+
+Shortlist Plus uses the browser's local storage to persist stored items between page reloads, and enable flexible and extremely fast rendering of stored shortlist items on any page across the site.
+
+The components can be integrated on to both builds and existing sites. This opens up a range of design possibilities for new builds, and also a potential new revenue stream as a bespoke product for existing customers.
+
+
 
 ## Problem Statement
 
@@ -7,17 +14,6 @@
 The current shortlist we use at Bluesky works in a limited capacity only. Users are limited to a six-item shortlist, with no baked in solution for interactivity. We are currently unable to offer, or meet client requests for, shortlist functionality on list pages.
 
 Designers are not always able to meet design briefs with the current implementation, or have to do so using workarounds that are less than ideal for performance and maintainability. The current shortlist can be slow - particularly when working locally, and this can create issues whereby user actions, and the results displayed, fall out of sync.
-
-
-## What is Shortlist Plus?
-
-
-Shortlist Plus is a small set of Petite Vue components that can be dropped on to both used vehicle list and used vehicle details pages. The components provide functionality for adding and removing shortlist items, and showing overall shortlist count anywhere on the page, with text and icon transitions triggered by user interaction.
-
-Shortlist Plus uses the browser's local storage to persist stored items between page reloads, and enable flexible and extremely fast rendering of stored shortlist items on any page across the site.
-
-The components can be integrated on to both builds and existing sites. This opens up a range of design possibilities for new builds, and also a potential new revenue stream as a bespoke product for existing customers.
-
 
 
 ## Goals of the project
