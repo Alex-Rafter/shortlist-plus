@@ -15,9 +15,9 @@ Copy and paste into your project as you need.
 <div v-scope="ShortListReveal({childClass : 'btn-secondary', text : 'show shortlist'})"></div>
 
 <!-- Short List Cars : START -->
-<div v-scope="ShortListData()" v-cloak :class="store.reveal === false ? 'd-none' : ''">
+<div v-scope="ShortListData()" v-cloak :class="slStore.reveal === false ? 'd-none' : ''">
   <!-- No Items -->
-  <div v-if="store.count === 0">
+  <div v-if="slStore.count === 0">
     <p>Add some items to your shortlist</p>
   </div>
   <!-- With Items -->

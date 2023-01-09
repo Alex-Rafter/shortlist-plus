@@ -1,4 +1,4 @@
-import { store } from './Store.js'
+import { slStore } from './Store.js'
 
 export function ShortListReveal (props) {
   return {
@@ -11,7 +11,7 @@ export function ShortListReveal (props) {
         :class="childClass === undefined ? 'btn-primary' : childClass"
         @click.prevent="show">{{text === undefined ? 'reveal' : text}}</button> `,
     show () {
-      store.reveal = !store.reveal
+      slStore.reveal = !slStore.reveal
     }
   }
 }

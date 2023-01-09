@@ -1,6 +1,5 @@
-import { reactive } from 'https://unpkg.com/petite-vue?module'
-
-export const store = reactive({
+import { reactive } from 'https://unpkg.com/petite-vue@0.4.1/dist/petite-vue.es.js'
+export const slStore = reactive({
   carsMounted: [],
   cars: [],
   get count () {

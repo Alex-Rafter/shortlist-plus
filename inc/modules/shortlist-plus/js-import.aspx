@@ -1,1 +1,0 @@
-<script type="module" src="/js/shortlist-plus/index.js"></script>

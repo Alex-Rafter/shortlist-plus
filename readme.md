@@ -43,7 +43,14 @@ Once the script has download and run you are good to move on to adding shortlist
 Add the following to your repeater (e.g CarRepeat.aspx) after the ASP Literals and Cog Controls and before the page markup:
 
 ```html
-<!--#include file="/inc/modules/shortlist-plus/props-object.aspx" -->
+<!--#include file="/inc/modules/petite/shortlist-plus/props-object.aspx" -->
+```
+
+
+Add the following to your uvd page (e.g used-car-details.aspx) after the ASP Literals and Cog Controls and before the page markup:
+
+```html
+<!--#include file="/inc/modules/petite/shortlist-plus/props-object-ucd.aspx" -->
 ```
 
 
@@ -76,7 +83,7 @@ Below is a breakdown of the components that come with Shortlist Plus. Each is gi
 
 Use Local Heart inside any used vehicle repeater, or on any used vehicle details page, that you want to include shortlist add / remove functionality to. The component will update the icon based on the vehicle's added / removed state (see below for customisation).  You can add as many copies of Local Heart to a repeater or details page and all will update together as the vehicle add / remove state is changed.
 
-Local Heart also provides a way to render an additional message to the user based on added / removed state via an :after pseudo selector. To customise the message and its styling, check out shortlist-plus.scss. 
+Local Heart also provides a way to render an additional message to the user based on added / removed state via an :after pseudo selector. To customise the message and its styling, check out shortlist-plus.scss.
 
 
 #### Snippet
@@ -144,7 +151,7 @@ If you need to tweak the component template, open /js/shortlist-plus/components/
 ### Shortlist Data
 This component is used to render the items stored in the shortlist to the page. By using vue's v-for directive, we can create a DRY template, with access to all shortlist items and their data. We can use this to create a full shortlist page with vehicle cards, or to create smaller summary lists, eg for use in modals or offcanvas elements.
 
-Here is an example of the Shortlist Data component being used with some vue directives. In this example the list items are shown / hidden with a toggle, and there is an additional message to the user if no items are stored in their shortlist. 
+Here is an example of the Shortlist Data component being used with some vue directives. In this example the list items are shown / hidden with a toggle, and there is an additional message to the user if no items are stored in their shortlist.
 
 ```html
 <!-- Short List Cars : START -->
@@ -174,7 +181,7 @@ Here is an example of the Shortlist Data component being used with some vue dire
 <summary>More</summary>
 
 
-##### Data accessible for each Shortlist item 
+##### Data accessible for each Shortlist item
 
 - url
 - manufacturer
