@@ -7,7 +7,7 @@ git checkout -b shortlist-plus
 git fetch shortlist main
 git checkout shortlist/main -- 'js/*.js'
 git checkout shortlist/main -- 'src/scss/app/theme/components/_shortlist-plus.scss'
-git checkout shortlist/main -- 'inc/modules/shortlist-plus/*.aspx'
+git checkout shortlist/main -- 'inc/modules/petite/shortlist-plus/*.aspx'
 
 # add sj scss to index.scss
 printf "\n%s" '@import "shortlist-plus";' >> 'src/scss/app/theme/components/index.scss'
