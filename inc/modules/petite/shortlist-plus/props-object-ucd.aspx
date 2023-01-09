@@ -18,8 +18,9 @@ PropColour = String.Format("colour : '{0}'", Colour.Text.replace("'", "`"))
 PropMilege = String.Format("mileage : '{0}'", mileage.Text.replace("'", "`"))
 PropFuelType = String.Format("fuelType : '{0}'", fuelType.Text.replace("'", "`"))
 PropTransmission = String.Format("transmission : '{0}'", Transmission.Text.replace("'", "`"))
+PropStockID = String.Format("stockID : '{0}'", Stock_ID.Text.replace("'", "`"))
 
-PropObj = String.Format("{0},{1},{2},{3},{4},{5},{6},{7},{8},{9},{10},{11},{11}", PropUrl, PropManu, PropModel, PropReg, PropYear, PropImage, PropPrice, PropImage, PropColour, PropMilege, PropFuelType, PropTransmission)
+PropObj = String.Format("{0},{1},{2},{3},{4},{5},{6},{7},{8},{9},{10},{11},{11},{12}", PropUrl, PropManu, PropModel, PropReg, PropYear, PropImage, PropPrice, PropImage, PropColour, PropMilege, PropFuelType, PropTransmission, PropStockID)
 PropObj = "{" & PropObj & "}"
 
 %>

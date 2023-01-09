@@ -20,6 +20,7 @@ export function LocalHeart(props) {
           </span>`,
     //
     carObj: {
+      stockID: props.data.stockID,
       url: props.data.url,
       manufacturer: props.data.manufacturer,
       model: props.data.model,
