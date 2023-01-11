@@ -24,6 +24,7 @@ export function LocalHeart(props) {
       url: props.data.url,
       manufacturer: props.data.manufacturer,
       model: props.data.model,
+      version: props.data.version,
       reg: props.data.reg,
       year: props.data.year,
       price: props.data.price,
